@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+multiplication:
+  anything:
+    routing-key: multiplication.*
+  exchange: multiplication_exchange
+  queue: gamification_multiplication_queue
+  solved:
+    key: multiplication.solved
+multiplicationHost: http://localhost:8082
+spring:
+  datasource:
+    url: jdbc:h2:file:~/gamification;DB_CLOSE_ON_EXIT=FALSE;
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
