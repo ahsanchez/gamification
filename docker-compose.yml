@@ -1,7 +1,8 @@
 version: '3'
 services:
   test:
-    container_name: test
-    image: rabbitmq
-    build: .
-    restart: on-failure
+    container_name: rabbit-learn-ms
+    image: rabbitmq:3-management
+    ports:
+      - "8081:15672"
+      - "5672:5672"
