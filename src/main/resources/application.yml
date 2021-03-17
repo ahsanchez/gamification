@@ -7,7 +7,7 @@ multiplication:
   queue: gamification_multiplication_queue
   solved:
     key: multiplication.solved
-multiplicationHost: http://localhost:8081
+multiplicationHost: http://localhost:8000/api
 spring:
   datasource:
     url: jdbc:h2:file:~/gamification;DB_CLOSE_ON_EXIT=FALSE;
