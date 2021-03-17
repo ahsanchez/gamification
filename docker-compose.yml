@@ -1,8 +1,7 @@
 version: '3'
 services:
-  test:
-    container_name: rabbit-learn-ms
-    image: rabbitmq:3-management
+  gamification:
+    container_name: gamification-learn-ms
+    build: .
     ports:
-      - "8081:15672"
-      - "5672:5672"
+      - "8082:8080"
